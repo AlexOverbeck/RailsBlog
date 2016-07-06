@@ -1,9 +1,8 @@
-##Rails Blog
+##ShMedium
 
-##### Purpose
-I am creating this blog like app to learn the basics of Ruby on Rails.
+##### What is ShMedium
+I am creating a simple Medium clone to learn Ruby on Rails
 
 ##### Stack
-* Rails 5
-* Postgresql
-* Material Design Lite (CSS)
+* Rails 5 (Postgresql)
+* Materialize CSS
