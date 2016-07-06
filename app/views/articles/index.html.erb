@@ -1,44 +1,24 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Basic Blog</span>
-      <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="/">Home</a>
-        <a class="mdl-navigation__link" href="/about">About</a>
-        <a class="mdl-navigation__link" href="/articles">Articles</a>
-        <a class="mdl-navigation__link" href="/articles/new">Create</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Basic Blog</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="/">Home</a>
-      <a class="mdl-navigation__link" href="/about">About</a>
-      <a class="mdl-navigation__link" href="/articles">Articles</a>
-      <a class="mdl-navigation__link" href="/articles/new">Create</a>
-    </nav>
-  </div>
+  <%= render 'partials/navbar' %>
   <main class="mdl-layout__content">
     <div class="page-content">
-      <h4>Articles</h4> 
+      <h4>Articles</h4>
       <table>
         <tr>
-          <th>Title</th> 
+          <th>Title</th>
           <th>Description</th>
         </tr>
 
         <% @articles.each do |article|  %>
           <tr>
-            <td><%= article.title %></td> 
-            <td><%= article.description %></td> 
+            <td><%= article.title %></td>
+            <td><%= article.description %></td>
             <td><%= link_to 'Edit', edit_article_path(article) %></td>
             <td><%= link_to 'Show', article_path(article) %></td>
+            <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure you?'}%></td>
           </tr>
         <% end %>
       </table>
     </div>
   </main>
 </div>
-
