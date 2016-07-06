@@ -1,6 +1,6 @@
-##Blog 
+##Rails Blog
 
 ##### Stack
 * Rails 5
-* Material Design Lite
-
+* Postgresql
+* Material Design Lite (CSS)
