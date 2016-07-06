@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       flash[:notice] = "Article was created"
-      redirect_to article_path(@article)
+      redirect_to articles_path
     else
       render :new
     end
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   def update
     if @article.update(article_params)
       flash[:notice] = "Article was updated"
-      redirect_to article_path(@article)
+      redirect_to articles_path
     else
       render :new
     end
