@@ -1,2 +1,9 @@
-<%= @user.username %>
-<%= @user.email %>
+<%= render 'partials/navbar' %>
+
+<h4>Welcome to <%= @user.username %>'s page</h4>
+
+<%= gravatar_for @user %>
+
+<h5><%= @user.username %>'s articles</h5>
+
+<%= render 'partials/articles', obj: @user.articles %>
