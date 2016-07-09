@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col s6 offset-s3">
+    <%= form_for @user do |f| %>
+      <div class="input-field">
+        <%= f.label :username, class: "" %>
+        <%= f.text_field :username, class: "" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :email, class: "" %>
+        <%= f.email_field :email, class: "" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :password, class: "" %>
+        <%= f.password_field :password, class: "materialize-textarea" %>
+      </div>
+      <%= f.submit (@user.new_record? ? 'Sign Up' : 'Update account'), class: "waves-effect waves-light btn"%>
+    <% end %>
+  </div>
+</div>
+
+
