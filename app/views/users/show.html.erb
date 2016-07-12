@@ -1,9 +1,10 @@
 <%= render 'partials/navbar' %>
-
-<h4>Welcome to <%= @user.username %>'s page</h4>
-
-<%= gravatar_for @user %>
-
-<h5><%= @user.username %>'s articles</h5>
-
-<%= render 'partials/articles', obj: @user.articles %>
+<%= render 'partials/alerts' %>
+<div class="row">
+    <div class="col s6 offset-s3">
+        <h4>Welcome to <%= @user.username %>'s page</h4>
+        <%= gravatar_for @user %>
+        <h5><%= @user.username %>'s articles</h5>
+        <%= render 'partials/articles', obj: @user.articles %>
+    </div>
+</div>
