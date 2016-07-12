@@ -1,6 +1,6 @@
-<ul>
+<div class="row">
     <% obj.each do |article|  %>
-        <li>
+        <div class="col s12 m4 l4">
             <div class="card small">
                 <div class="card-content">
                     <span class="card-title"><%= article.title %></span>
@@ -12,6 +12,6 @@
                     <a><%= link_to 'Delete', article_path(article), method: :delete%></a>
                 </div>
             </div>
-        </li>
+        </div>
     <% end %>
-</ul>
+</div>
