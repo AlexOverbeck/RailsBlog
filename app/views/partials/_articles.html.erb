@@ -1,17 +1,17 @@
 <ul>
-  <% obj.each do |article|  %>
-    <li>
-      <div class="card small">
-        <div class="card-content">
-          <span class="card-title"><%= article.title %></span>
-          <p><%= article.description %></p>
-        </div>
-        <div class="card-action">
-          <a><%= link_to 'Edit', edit_article_path(article) %></a>
-          <a><%= link_to 'Show', article_path(article) %></a>
-          <a><%= link_to 'Delete', article_path(article), method: :delete%></a>
-        </div>
-      </div>
-    </li>
-  <% end %>
+    <% obj.each do |article|  %>
+        <li>
+            <div class="card small">
+                <div class="card-content">
+                    <span class="card-title"><%= article.title %></span>
+                    <p><%= article.description %></p>
+                </div>
+                <div class="card-action">
+                    <a><%= link_to 'Edit', edit_article_path(article) %></a>
+                    <a><%= link_to 'Show', article_path(article) %></a>
+                    <a><%= link_to 'Delete', article_path(article), method: :delete%></a>
+                </div>
+            </div>
+        </li>
+    <% end %>
 </ul>
