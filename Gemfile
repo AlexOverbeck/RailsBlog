@@ -5,6 +5,8 @@ ruby '2.3.1'
 gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+#PostgresQL
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -19,6 +21,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
+gem 'react-rails'
+gem 'flux-rails-assets'
 
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,8 +45,6 @@ group :development do
 end
 
 group :production do
-    #PostgresQL
-    gem 'pg'
     # Makes running your Rails app easier
     gem 'rails_12factor'
 end
