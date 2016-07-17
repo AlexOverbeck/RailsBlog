@@ -59,7 +59,9 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.9.10)
+    faker (1.6.5)
+      i18n (~> 0.5)
+    ffi (1.9.14)
     flux-rails-assets (2.1.0)
       railties (>= 3.1)
     globalid (0.3.6)
@@ -142,11 +144,11 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    spring (1.7.1)
+    spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
       spring (~> 1.2)
-    sprockets (3.6.2)
+    sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.1.1)
@@ -164,10 +166,11 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    web-console (3.3.0)
-      activemodel (>= 4.2)
+    web-console (3.3.1)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
       debug_inspector
-      railties (>= 4.2)
+      railties (>= 5.0)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -180,6 +183,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
+  faker
   flux-rails-assets
   jbuilder (~> 2.5)
   jquery-rails
