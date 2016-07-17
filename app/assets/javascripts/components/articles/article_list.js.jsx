@@ -1,9 +1,19 @@
 var ArticleList = React.createClass({
+  componentWillMount: function() {
+    ArticleStore.init(this.props.articles);
+  },
+
   render: function() {
     return (
-      <div>
-        <h1>Hello Article List</h1>
-        <Article title='test article title'/>
+      <div className='row'>
+        {ArticleStore.articles.map(function(article) {
+          return (
+            <Article
+              key={article.id}
+              title={article.title}
+              description={article.description} />
+          )
+      })}
       </div>
     );
   }
