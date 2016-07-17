@@ -27,6 +27,10 @@ var ArticleStore = {
 
   removeArticle: function(id, callback){
     console.log('Remove Article ID: ' + id);
+    // Filter out the targeted article
+    ArticleStore.articles = ArticleStore.articles.filter(function(article){
+      return article.id != id
+    });
     callback();
   },
 
