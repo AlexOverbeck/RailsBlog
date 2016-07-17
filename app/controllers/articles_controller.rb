@@ -35,9 +35,13 @@ class ArticlesController < ApplicationController
     end
 
     def destroy
-        @article.destroy
-        flash[:notice] = "Article was deleted"
-        redirect_to articles_path
+      @article.destroy
+      respond_to do |format|
+        format.html do
+          redirect_to root_path, flash: { notice: 'Article was deleted' }
+        end
+        format.js
+      end
     end
 
     private
