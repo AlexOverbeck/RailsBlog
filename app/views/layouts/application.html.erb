@@ -9,6 +9,18 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <nav class="green accent-3">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">ShMedium</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><%= link_to "Articles", articles_path %></li>
+                    <li><%= link_to "Create", new_article_path %></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                    <li><%= link_to "Logout", logout_path, method: :delete %></li>
+                </ul>
+            </div>
+        </nav>
         <%= react_component('HelloWorld', name: 'Alex') %>
         <%= yield %>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js" data-turbolinks-eval=false></script>
