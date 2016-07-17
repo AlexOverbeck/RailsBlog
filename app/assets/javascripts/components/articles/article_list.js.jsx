@@ -1,10 +1,10 @@
 var ArticleList = React.createClass({
-  componentWillMount: function() {
-    ArticleStore.init(this.props.articles);
-    this.updateState();
+  getInitialState: function() {
+    return this.props;
   },
 
   componentDidMount: function() {
+    ArticleStore.init(this.props.articles);
     ArticleStore.addChangeListener(this.updateState);
   },
 
@@ -23,11 +23,7 @@ var ArticleList = React.createClass({
       <div className='row'>
         {this.state.articles.map(function(article) {
           return (
-            <Article
-              key={article.id}
-              id={article.id}
-              title={article.title}
-              description={article.description} />
+            <Article key={article.id} {...article} />
           )
       })}
       </div>

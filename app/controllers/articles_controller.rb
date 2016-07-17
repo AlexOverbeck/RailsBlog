@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
 
     def index
-        @articles = Article.all;
+      render component: 'ArticleList', props: { articles: Article.all }
     end
 
     def new
@@ -37,9 +37,6 @@ class ArticlesController < ApplicationController
     def destroy
       @article.destroy
       respond_to do |format|
-        format.html do
-          redirect_to root_path, flash: { notice: 'Article was deleted' }
-        end
         format.js
       end
     end
